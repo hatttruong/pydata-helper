@@ -23,9 +23,16 @@ def advanced_progressbar():
 
 
 def simple_progressbar():
-    """Summary
+    """
+    The progressbar has maximum 20 equal signs which represents the percentage of
+    progress.
+    If we want to change the maximum equal signs, update "20" in the following
+    line:
+        sys.stdout.write("[%-20s] %d%%" % ('=' * int(frac / 5), frac))
     """
     total = 150
+    max_length = 30
+    pattern = "[%-30s] %d%%"
     for i in range(total):
         # do your main task here
         sleep(0.1)
@@ -33,5 +40,6 @@ def simple_progressbar():
         sys.stdout.write('\r')
         # the exact output you're looking for
         frac = int((i + 1) * 100. / total)
-        sys.stdout.write("[%-20s] %d%%" % ('=' * int(frac / 5), frac))
+        cur_length = int(frac * max_length * 1. / 100)
+        sys.stdout.write(pattern % ('=' * cur_length, frac))
         sys.stdout.flush()
