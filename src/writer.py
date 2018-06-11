@@ -1,10 +1,28 @@
 """Summary
 """
-import pandas as pd
 import csv
 
 
-def save_list(list_data, path, lineterminator='\n', encoding=None):
+def save_list(list_data, path, lineterminator='\n', encoding=None, mode='w'):
+    """
+    Export flat list fo file
+
+    Args:
+        list_data (list): list of data
+        path (str): file name
+        lineterminator (str, optional): line break, default is '\n'
+        encoding (str, optional): encoding of data such as 'utf-8'
+        mode (str, optional): write (w), append (a)
+    """
+    with open(path, mode) as f:
+        list_data = [item + lineterminator for item in list_data]
+        if encoding is not None:
+            list_data = [item.encode(encoding) for item in list_data]
+
+        f.writelines(list_data)
+
+
+def csv_save_list(list_data, path, lineterminator='\n', encoding=None):
     """
     Export flat list fo file using csv
 
