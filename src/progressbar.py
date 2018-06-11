@@ -25,13 +25,13 @@ def advanced_progressbar():
 def simple_progressbar():
     """Summary
     """
-    total = 150.
+    total = 150
     for i in range(total):
         # do your main task here
         sleep(0.1)
 
         sys.stdout.write('\r')
         # the exact output you're looking for
-        frac = int(i * 100. / total)
-        sys.stdout.write("[%-20s] %d%%" % ('=' * frac, frac))
+        frac = int((i + 1) * 100. / total)
+        sys.stdout.write("[%-20s] %d%%" % ('=' * int(frac / 5), frac))
         sys.stdout.flush()
