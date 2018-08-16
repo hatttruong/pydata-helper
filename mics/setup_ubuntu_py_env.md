@@ -1,3 +1,36 @@
+# Ubuntu Command #
+
+## 1. Commands related to OS
+
+### 1. Typical command:
+
+```
+# SSH
+$ ssh <user_name>@<ip_address>
+
+# Reboot
+$ sudo reboot
+
+# Screen
+
+# list all screens
+$ screen -l
+
+# attach screen
+$ screen -r <screen_number>
+
+# deattach screen: Ctrl-A+D
+# terminate screen: Ctrl-D
+```
+
+### 2. Setup Disk Storage in Linux
+
+**Situtaion**:
+
+**Solution**: [Setup Flexible Disk Storage with Logical Volume Management (LVM) in Linux](https://www.tecmint.com/create-lvm-storage-in-linux/)
+
+
+## 2. Set up environment for Python
     ```
     # install pip
     $ sudo apt-get update
