@@ -31,6 +31,43 @@ In order to change theme: `Sublime Text` > `Preferences` > `Theme...`
 "trim_trailing_white_space_on_save": true
 ```
 
+Updated 24/08/2018, setting in Sublime on OSX
+```
+{
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "theme": "Soda Dark 3.sublime-theme",
+    // Columns in which to display vertical rulers
+    "rulers": [80],
+    // Set to true to automatically save files when switching to a different file
+    // or application
+    "save_on_focus_lost": true,
+    // Set to true to insert spaces when tab is pressed
+    "translate_tabs_to_spaces": true,
+    // Set to true to removing trailing white space on save
+    "trim_trailing_white_space_on_save": true,
+    // Set to a value other than 0 to force wrapping at that column rather than the
+    // window width
+    "wrap_width": 80,
+
+    "default_line_ending": "unix",
+
+    // Set to false to disable detection of tabs vs. spaces on load
+    "detect_indentation": false,
+
+    "font_size": 13,
+
+    // Set to false to prevent line numbers being drawn in the gutter
+    "line_numbers": true,
+
+    // Set to false to hide the gutter altogether
+    "gutter": true,
+
+}
+```
+
 ## Essential Key Shortcut
 
 `Sublime Text` > `Preferences` > `Key Bindings`

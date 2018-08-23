@@ -33,7 +33,7 @@ $ git commit -m "First commit"
 $ git remote add origin https://github.com/abc/xyz.git
 # Sets the new remote
 $ git remote -v
-# Verifies the new remote URL 
+# Verifies the new remote URL
 ```
 - Push the changes in your local repository to GitHub.
 ```
@@ -73,6 +73,7 @@ Agent pid 59566
 
 Host *
  AddKeysToAgent yes
+ IgnoreUnknown UseKeychain
  UseKeychain yes
  IdentityFile ~/.ssh/id_rsa
 
