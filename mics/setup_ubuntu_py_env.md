@@ -7,7 +7,10 @@
     - [Connect via SSH](#connect-via-ssh)
     - [Screen command](#screen-command)
     - [Files, Directory](#files-directory)
+    - [Disk](#disk)
+    - [Permission](#permissions)
 * [Setup Disk Storage in Linux](#setup-disk-storage-in-linux)
+* [Create auto connect to server with shell script using expect](#create-auto-connect-to-server-with-shell-script-using-expect)
 * [Set up environment for Python](#set-up-environment-for-python)
 
 ## Commands related to OS
@@ -49,14 +52,34 @@ $ screen -r <screen_number>
 
 $ sudo ls YOUR_DIR -l
 
-# count files in directory
+# COUNT_FILES in directory
 $ sudo find YOUR_DIR -type f | wc -l
 
-# calculate size of folder
+# calculate SIZE_OF_FOLDER
 $ sudo du -sh file_path
 
-# zip all files of folder
+# ZIP all files of folder
 $ zip -r myfiles.zip mydir
+
+# count number of lines START_WITH_SOMETHING in a specific file
+$ awk '/^yourcheckstring/{a++}END{print a}' file_path
+```
+
+### Disk
+
+```
+# check disk
+$ df -h
+
+# check remaining of current directory
+$ du -sh
+```
+
+### Permissions
+
+```
+# Give execute permission to your script
+$ chmod +x /path/to/yourscript.sh
 ```
 
 ## Setup Disk Storage in Linux
@@ -65,6 +88,50 @@ $ zip -r myfiles.zip mydir
 
 **Solution**: [Setup Flexible Disk Storage with Logical Volume Management (LVM) in Linux](https://www.tecmint.com/create-lvm-storage-in-linux/)
 
+
+## Create auto connect to server with shell script using expect
+In some cases, you need to connect to server or copy from/to server which is protected by password and these actions usually happens. It's completely boring to enter not-easy-to-remember password over the time. Hence, to create a bat script to make this process automatic is necessary.
+
+* install expect package
+```
+sudo apt-get install tcl8.5
+sudo apt-get install expect
+```
+
+* create connect shell script
+```
+#!/usr/bin/expect -f
+spawn ssh -o GSSAPIAuthentication=no [your_user_name]@x.x.x.x
+expect "password:"
+send "[your_password]\r"
+interact
+```
+
+Then, simply run `./connect.sh`
+
+* create copy shell script (copy from local to server)
+```
+#!/usr/bin/expect -f
+set src_file [lindex $argv 0]
+set dest_file [lindex $argv 1]
+spawn scp -r $src_file [your_username]@[your_id_address]:$dest_file
+expect "password:"
+send "[your_password]\r"
+interact
+```
+
+* create copy shell script (copy from server to local)
+```
+#!/usr/bin/expect -f
+set src_file [lindex $argv 0]
+set dest_file [lindex $argv 1]
+spawn scp -r [your_username]@[your_id_address]:$src_file $dest_file
+expect "password:"
+send "[your_password]\r"
+interact
+```
+
+Note: "-r" means copy the entire folder
 
 ## Set up environment for Python
 
