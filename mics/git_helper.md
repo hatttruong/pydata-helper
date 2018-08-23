@@ -1,6 +1,15 @@
 # Some common actions in Git #
 
-## [Adding an existing project to GitHub using the command line](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
+
+## Table of contents
+
+* [Adding an existing project to GitHub using the command line](#adding-an-existing-project-to-github-using-the-command-line)
+* [Set up username and password](#set-up-username-and-password)
+* [Set up SSH](#set-up-ssh)
+
+## Adding an existing project to GitHub using the command line
+
+Links: https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 
 - Create a new repository on GitHub. To avoid errors, do not initialize the new repository with README, license, or `gitignore` files. You can add these files after your project has been pushed to GitHub.
 - Open Git Bash.

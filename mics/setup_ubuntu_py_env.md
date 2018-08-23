@@ -1,5 +1,15 @@
 # Ubuntu Command #
 
+## Table of contents
+
+* [Commands related to OS](#commands-related-to-os)
+    - [Typical commands](#typical-commands)
+    - [Connect via SSH](#connect-via-ssh)
+    - [Screen command](#screen-command)
+    - [Files, Directory](#files-directory)
+* [Setup Disk Storage in Linux](#setup-disk-storage-in-linux)
+* [Set up environment for Python](#set-up-environment-for-python)
+
 ## Commands related to OS
 
 ### Typical commands
@@ -49,7 +59,7 @@ $ sudo du -sh file_path
 $ zip -r myfiles.zip mydir
 ```
 
-### 2. Setup Disk Storage in Linux
+## Setup Disk Storage in Linux
 
 **Situtaion**:
 
