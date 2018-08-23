@@ -1,18 +1,24 @@
 # Ubuntu Command #
 
-## 1. Commands related to OS
+## Commands related to OS
 
-### 1. Typical command:
+### Typical commands
+
+```
+# Reboot
+$ sudo reboot
+```
+
+### Connect via SSH:
 
 ```
 # SSH
 $ ssh <user_name>@<ip_address>
+```
 
-# Reboot
-$ sudo reboot
+### Screen command
 
-# Screen
-
+```
 # list all screens
 $ screen -l
 
@@ -23,6 +29,26 @@ $ screen -r <screen_number>
 # terminate screen: Ctrl-D
 ```
 
+### Files, Directory
+
+```
+# list all files in directory: 
+# -l: detail
+# -t: order by last modified date, -tr: reverse
+# --block-size=M
+
+$ sudo ls YOUR_DIR -l
+
+# count files in directory
+$ sudo find YOUR_DIR -type f | wc -l
+
+# calculate size of folder
+$ sudo du -sh file_path
+
+# zip all files of folder
+$ zip -r myfiles.zip mydir
+```
+
 ### 2. Setup Disk Storage in Linux
 
 **Situtaion**:
@@ -30,35 +56,36 @@ $ screen -r <screen_number>
 **Solution**: [Setup Flexible Disk Storage with Logical Volume Management (LVM) in Linux](https://www.tecmint.com/create-lvm-storage-in-linux/)
 
 
-## 2. Set up environment for Python
-    ```
-    # install pip
-    $ sudo apt-get update
-    $ sudo apt-get install python-pip
+## Set up environment for Python
 
-    # OR
-    $ sudo apt install python2.7 python-pip
-    $ sudo pip2 install <package>
+```
+# install pip
+$ sudo apt-get update
+$ sudo apt-get install python-pip
 
-    # install pip3
-    $ sudo apt-get update
-    $ sudo apt-get install python3-pip
+# OR
+$ sudo apt install python2.7 python-pip
+$ sudo pip2 install <package>
 
-    # install jupyter notebook
-    $ sudo apt-get -y install ipython ipython-notebook
-    $ sudo -H pip3 install jupyter
+# install pip3
+$ sudo apt-get update
+$ sudo apt-get install python3-pip
 
-    # install some important package
-    $ sudo pip3 install scikit-learn
-    $ sudo pip3 install gensim
-    $ sudo pip3 install nltk
-    $ sudo pip3 install pandas
+# install jupyter notebook
+$ sudo apt-get -y install ipython ipython-notebook
+$ sudo -H pip3 install jupyter
 
-    # install screen
-    $ sudo apt-get update
-    $ sudo apt-get install screen
+# install some important package
+$ sudo pip3 install scikit-learn
+$ sudo pip3 install gensim
+$ sudo pip3 install nltk
+$ sudo pip3 install pandas
 
-    # install htop
-    $ sudo apt install htop
-    
-    ```
+# install screen
+$ sudo apt-get update
+$ sudo apt-get install screen
+
+# install htop
+$ sudo apt install htop
+
+```
