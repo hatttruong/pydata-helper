@@ -7,11 +7,13 @@
     - [Connect via SSH](#connect-via-ssh)
     - [Screen command](#screen-command)
     - [Files, Directory](#files-directory)
+    - [Zip & Unzip](#zip-unzip)
     - [Disk](#disk)
     - [Permission](#permissions)
 * [Setup Disk Storage in Linux](#setup-disk-storage-in-linux)
 * [Create auto connect to server with shell script using expect](#create-auto-connect-to-server-with-shell-script-using-expect)
 * [Set up environment for Python](#set-up-environment-for-python)
+* [Set up JAVA_HOME](#set-up-java_home)
 
 ## Commands related to OS
 
@@ -58,11 +60,23 @@ $ sudo find YOUR_DIR -type f | wc -l
 # calculate SIZE_OF_FOLDER
 $ sudo du -sh file_path
 
-# ZIP all files of folder
-$ zip -r myfiles.zip mydir
-
 # count number of lines START_WITH_SOMETHING in a specific file
 $ awk '/^yourcheckstring/{a++}END{print a}' file_path
+```
+
+### Zip & Unzip
+
+```
+# ZIP
+# For tar.gz
+$ tar -xzf rebol.tar.gz
+
+# For gz only
+$ gunzip rebol.gz
+$ chmod +x rebol
+
+# ZIP all files of folder
+$ zip -r myfiles.zip mydir
 ```
 
 ### Disk
@@ -165,4 +179,19 @@ $ sudo apt-get install screen
 # install htop
 $ sudo apt install htop
 
+```
+
+## Set up JAVA_HOME
+
+```
+# Open /etc/environment in any text editor like nano or gedit and add the following line: JAVA_HOME="/usr/lib/jvm/open-jdk"
+# for the exact path, list all JAVA version by "ls /usr/lib/jvm"
+$ sudo vi /etc/environment
+
+# Usually most linux systems source /etc/environment by default. If your system doesn't do that add the following line to ~/.bashrc
+$ sudo vi ~/.bashrc
+# add line "source /etc/environment"
+
+# Then check the variable, by running this command:
+$ echo $JAVA_HOME
 ```
