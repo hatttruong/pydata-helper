@@ -4,7 +4,7 @@
 
 [Reference](https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/)
 
-### HomeBrew
+## HomeBrew
 
 ```
 # install HomeBrew
@@ -12,7 +12,7 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 $ export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
 ```
 
-### Install the GNU Command Line Tools
+## Install the GNU Command Line Tools
 
 ```
 $ brew install coreutils
@@ -22,7 +22,21 @@ $ brew install screen
 $ brew install git
 $ brew install openssh
 $ brew install unzip
+$ brew install htop
 # Homebrew installs pip pointing to the Homebrew’d Python 3 for you.
-$ brew install python 
+$ brew install python
 
+```
+
+## Common Cmd
+
+```
+# wget in MacOS
+$ curl <your_url> -o <filename>
+
+# remove directory
+$ rmdir <your_dir>
+
+# Ctrl-F5
+$ cmd + Shift + R
 ```
