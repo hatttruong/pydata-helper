@@ -15,11 +15,12 @@ Press `Ctrl-Shift-P`, type **`Install Package`**, type name of package...
 6. AutoDocstring: `Ctrl-Shift-Alt+"` (it is quite handy and useful when auto generating summary for class, function, detect added parameters, deleted parameters)
 7. Python PEP8 Autoformat: wrapping package, variable which are not used anywhere
 8. Markdown Preview: https://github.com/revolunet/sublimetext-markdown-preview
-9. *SublimeLinter*: https://packagecontrol.io/packages/SublimeLinter
-10. *Color Highlighter*
-11. *Git GUI Clients*
-12. *HTML-CSS-JS Prettify*
-13. *Javascript & NodeJS Snippets*
+9. SublimeAStyleFormatter: format C/C++/Java
+10. HTML-CSS-JS Prettify:
+x. *SublimeLinter*: https://packagecontrol.io/packages/SublimeLinter
+x. *Color Highlighter*
+x. *Git GUI Clients*
+x. *Javascript & NodeJS Snippets*
 
 In order to change theme: `Sublime Text` > `Preferences` > `Theme...`
 
@@ -64,6 +65,9 @@ Updated 24/08/2018, setting in Sublime on OSX
 
     // Set to false to hide the gutter altogether
     "gutter": true,
+
+    // autoformat code on save ?
+    "autoformat_on_save": true,
 
 }
 ```

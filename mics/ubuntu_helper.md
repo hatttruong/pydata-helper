@@ -47,7 +47,7 @@ $ screen -r <screen_number>
 ### Files, Directory
 
 ```
-# list all files in directory: 
+# list all files in directory:
 # -l: detail
 # -t: order by last modified date, -tr: reverse
 # --block-size=M
@@ -91,10 +91,19 @@ $ du -sh
 
 ### Permissions
 
+* Give execute permission to your script
+
 ```
-# Give execute permission to your script
 $ chmod +x /path/to/yourscript.sh
 ```
+
+* Change password
+
+To change the root password: `sudo passwd`
+To change your user password: `passwd`
+To change other users password: `sudo passwd USERNAME`
+
+To do it GUI open the application User Accounts from the Dash and there you can change password easily for all users unless the root
 
 ## Setup Disk Storage in Linux
 

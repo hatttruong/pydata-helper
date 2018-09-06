@@ -1,4 +1,4 @@
-# Mapping keyboard between Mac & Windows #
+# MACOS Commands #
 
 ## Terminal
 
@@ -34,9 +34,67 @@ $ brew install python
 # wget in MacOS
 $ curl <your_url> -o <filename>
 
-# remove directory
-$ rmdir <your_dir>
-
 # Ctrl-F5
 $ cmd + Shift + R
 ```
+
+## Files/Directory
+
+* **FILES**
+
+```
+# count number of files in directory
+$ ls your_directory | wc -l
+
+# list files with size
+$ ls -lh  your_path
+
+# delete files with certain extension
+$ find /path -name '*.csv' -delete
+```
+
+* **FOLDERS**
+
+```
+# list folders with size
+$ du -sh /path/to/dir/*
+
+# remove directory
+$ rmdir <your_dir>
+
+```
+
+## Zip/Unzip
+
+```
+$ zip -r <name_of_zipped_file> <name_of_folder_to_be_zipped>
+$ unzip <name_of_zipped_file>
+```
+
+## Permissions
+
+```
+$ chmod +x script.sh
+```
+
+## Set up environment for Python
+
+```
+$ brew install python3
+# Then, the pip or pip3 is installed automatically, and you can install any package by `pip install <package>`
+
+# install jupyter notebook
+$ pip3 install --upgrade pip
+$ pip3 install jupyter
+
+# install some important package
+$ pip3 install scikit-learn
+$ pip3 install gensim
+$ pip3 install nltk
+$ pip3 install pandas
+
+```
+
+## Set up VPN
+* Install [Tunnelblick](https://tunnelblick.net/)
+*

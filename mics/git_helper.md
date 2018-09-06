@@ -86,3 +86,11 @@ $ pbcopy < ~/.ssh/id_rsa.pub
 # In the user settings sidebar, click SSH and GPG keys.
 # Click New SSH key or Add SSH key...
 ```
+
+## Rename folder
+
+```
+git mv -f oldfolder newfolder
+git add -u newfolder
+git commit -m "changed the foldername whaddup"
+```
