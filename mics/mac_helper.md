@@ -1,5 +1,18 @@
 # MACOS Commands #
 
+## Table of contents
+
+* [Install HomeBrew](#homebrew)
+* [Install the GNU Command Line Tools](#install-the-gnu-command-line-tools)
+* [Common Cmd](#common-cmd)
+* [Files/Directory](#filesdirectory)
+* [Zip/Unzip](#zipunzip)
+* [Permissions](#permissions)
+* [Python environment](#set-up-environment-for-python)
+* [Setup Java](#set-up-java)
+* [Setup VNP](#set-up-vpn)
+* []()
+
 ## Terminal
 
 [Reference](https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/)
@@ -97,6 +110,15 @@ $ pip3 install gensim
 $ pip3 install nltk
 $ pip3 install pandas
 
+```
+
+## Set up JAVA
+
+```
+# install
+$ brew cask install java
+# verify
+$ brew cask info java
 ```
 
 ## Set up VPN
