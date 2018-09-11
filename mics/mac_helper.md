@@ -69,6 +69,10 @@ $ rmdir <your_dir>
 ```
 $ zip -r <name_of_zipped_file> <name_of_folder_to_be_zipped>
 $ unzip <name_of_zipped_file>
+
+# tar.xz
+$ tar -cJf filename.tar.xz /path/to/folder_or_file ...
+$ tar xf filename.tar.xz
 ```
 
 ## Permissions
