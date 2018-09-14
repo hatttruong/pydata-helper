@@ -209,5 +209,10 @@ $ echo $JAVA_HOME
 
 [Answer](https://askubuntu.com/questions/91543/apt-get-update-fails-to-fetch-files-temporary-failure-resolving-error)
 ```
-echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
+$ sudo vi /etc/resolvconf/resolv.conf.d/tail
+# paste these config
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+
+$ sudo reboot
 ```
