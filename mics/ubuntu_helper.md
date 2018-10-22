@@ -42,6 +42,11 @@ $ screen -r <screen_number>
 
 # deattach screen: Ctrl-A+D
 # terminate screen: Ctrl-D
+
+# rename: name a session when starting it with the -S name option. From within a running screen, you can change it by typing CTRL-a, :sessionname your_screen_name
+
+# kill screen
+$ screen -X -S [session # you want to kill] quit
 ```
 
 ### Files, Directory

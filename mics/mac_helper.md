@@ -64,6 +64,13 @@ $ ls -lh  your_path
 
 # delete files with certain extension
 $ find /path -name '*.csv' -delete
+
+# show empty files
+$ find /your/path/ -name '*.csv' -type f -size 0
+
+# delete empty lines of file
+$ sed 's/^ *//; s/ *$//; /^$/d; /^\s*$/d' file.txt > output.txt
+$ sed '/^\s*$/d' file.txt > output.txt
 ```
 
 * **FOLDERS**
@@ -77,14 +84,22 @@ $ rmdir <your_dir>
 
 ```
 
-## Zip/Unzip
+## Zip/Unzip/tar
 
 ```
+# ZIP
 $ zip -r <name_of_zipped_file> <name_of_folder_to_be_zipped>
 $ unzip <name_of_zipped_file>
 
-# tar.xz
+# TAR.XZ
+# gzip
 $ tar -cJf filename.tar.xz /path/to/folder_or_file ...
+$ split -b 100m filename.tar.xz "filename.tar.xz.part"
+
+# recovering multiple files to a big file
+$ cat filename.tar.xz.part.* > newfile
+
+# ungzip
 $ tar xf filename.tar.xz
 ```
 
