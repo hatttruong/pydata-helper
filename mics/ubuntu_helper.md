@@ -20,6 +20,10 @@
 ### Typical commands
 
 ```
+# OS Version (https://www.cyberciti.biz/faq/how-to-check-os-version-in-linux-command-line/)
+$ cat /etc/os-release
+
+
 # Reboot
 $ sudo reboot
 ```
@@ -192,6 +196,20 @@ $ sudo apt-get install screen
 
 # install htop
 $ sudo apt install htop
+
+```
+
+### Install Python 3 from source
+
+List of Python release: [https://www.python.org/downloads/source/](https://www.python.org/downloads/source/)
+
+```
+$ wget https://www.python.org/ftp/python/3.7.1/Python-3.7.1.tgz
+$ tar -xvf Python-3.7.1.tgz
+$ cd Python-3.7.1.tgz
+$ ./configure
+$ sudo make
+$ sudo make install
 
 ```
 
